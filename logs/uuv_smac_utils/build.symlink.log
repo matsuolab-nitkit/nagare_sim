@@ -1,4 +1,0 @@
-Symlinking /home/ubuntu/catkin_ws/devel/lib/pkgconfig/uuv_smac_utils.pc
-Symlinking /home/ubuntu/catkin_ws/devel/lib/python2.7/dist-packages/uuv_smac_utils/__init__.py
-Symlinking /home/ubuntu/catkin_ws/devel/share/uuv_smac_utils/cmake/uuv_smac_utilsConfig.cmake
-Symlinking /home/ubuntu/catkin_ws/devel/share/uuv_smac_utils/cmake/uuv_smac_utilsConfig-version.cmake

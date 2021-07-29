@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/catkin_ws/install
-
-Name: propeller_description
-Description: Description of propeller_description
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/catkin_ws/devel/.private/uuv_batch_run_example
-
-Name: uuv_batch_run_example
-Description: Description of uuv_batch_run_example
-Version: 0.5.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

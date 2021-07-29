@@ -1,1 +1,0 @@
-/home/ubuntu/catkin_ws/devel/.private/nagare_control/share/nagare_control/cmake/nagare_controlConfig.cmake

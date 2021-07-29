@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/catkin_ws/install
-
-Name: uuv_smac_utils
-Description: Description of uuv_smac_utils
-Version: 0.5.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

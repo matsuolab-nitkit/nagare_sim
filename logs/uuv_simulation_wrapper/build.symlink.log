@@ -1,4 +1,0 @@
-Symlinking /home/ubuntu/catkin_ws/devel/lib/pkgconfig/uuv_simulation_wrapper.pc
-Symlinking /home/ubuntu/catkin_ws/devel/lib/python2.7/dist-packages/uuv_simulation_runner/__init__.py
-Symlinking /home/ubuntu/catkin_ws/devel/share/uuv_simulation_wrapper/cmake/uuv_simulation_wrapperConfig-version.cmake
-Symlinking /home/ubuntu/catkin_ws/devel/share/uuv_simulation_wrapper/cmake/uuv_simulation_wrapperConfig.cmake

@@ -1,1 +1,0 @@
-/home/ubuntu/catkin_ws/devel/.private/uuv_simulation_evaluation/lib/python2.7/dist-packages/uuv_cost_function/__init__.py

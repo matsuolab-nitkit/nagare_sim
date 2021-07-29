@@ -1,1 +1,0 @@
-/home/ubuntu/catkin_ws/devel/.private/uuv_simulation_runner_example/lib/pkgconfig/uuv_simulation_runner_example.pc

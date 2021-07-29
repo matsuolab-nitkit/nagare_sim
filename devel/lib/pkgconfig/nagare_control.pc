@@ -1,1 +1,0 @@
-/home/ubuntu/catkin_ws/devel/.private/nagare_control/lib/pkgconfig/nagare_control.pc

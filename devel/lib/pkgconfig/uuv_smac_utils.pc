@@ -1,1 +1,0 @@
-/home/ubuntu/catkin_ws/devel/.private/uuv_smac_utils/lib/pkgconfig/uuv_smac_utils.pc

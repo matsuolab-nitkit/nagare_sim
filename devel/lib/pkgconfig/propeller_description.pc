@@ -1,1 +1,0 @@
-/home/ubuntu/catkin_ws/devel/.private/propeller_description/lib/pkgconfig/propeller_description.pc
