@@ -1,0 +1,1 @@
+/home/ubuntu/catkin_ws/devel/.private/uuv_smac_utils/share/uuv_smac_utils/cmake/uuv_smac_utilsConfig-version.cmake

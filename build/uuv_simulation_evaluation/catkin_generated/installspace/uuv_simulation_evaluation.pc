@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/install
+
+Name: uuv_simulation_evaluation
+Description: Description of uuv_simulation_evaluation
+Version: 0.5.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

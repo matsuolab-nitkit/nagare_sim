@@ -1,0 +1,3 @@
+Symlinking /home/ubuntu/catkin_ws/devel/lib/pkgconfig/uuv_batch_run_example.pc
+Symlinking /home/ubuntu/catkin_ws/devel/share/uuv_batch_run_example/cmake/uuv_batch_run_exampleConfig-version.cmake
+Symlinking /home/ubuntu/catkin_ws/devel/share/uuv_batch_run_example/cmake/uuv_batch_run_exampleConfig.cmake

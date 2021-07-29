@@ -1,0 +1,7 @@
+set(uuv_smac_utils_SETUP_PY_SETUP_MODULE "distutils.core")
+set(uuv_smac_utils_SETUP_PY_VERSION "0.5.0")
+set(uuv_smac_utils_SETUP_PY_SCRIPTS "")
+set(uuv_smac_utils_SETUP_PY_PACKAGES "uuv_smac_utils")
+set(uuv_smac_utils_SETUP_PY_PACKAGE_DIRS "src/uuv_smac_utils")
+set(uuv_smac_utils_SETUP_PY_MODULES "")
+set(uuv_smac_utils_SETUP_PY_MODULE_DIRS "")

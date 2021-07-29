@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/install
+
+Name: uuv_smac_example
+Description: Description of uuv_smac_example
+Version: 0.5.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

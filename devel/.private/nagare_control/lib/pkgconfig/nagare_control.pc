@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/devel/.private/nagare_control
+
+Name: nagare_control
+Description: Description of nagare_control
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/devel/.private/uuv_tutorial_dp_controller
+
+Name: uuv_tutorial_dp_controller
+Description: Description of uuv_tutorial_dp_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

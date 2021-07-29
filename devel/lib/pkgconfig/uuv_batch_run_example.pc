@@ -1,0 +1,1 @@
+/home/ubuntu/catkin_ws/devel/.private/uuv_batch_run_example/lib/pkgconfig/uuv_batch_run_example.pc

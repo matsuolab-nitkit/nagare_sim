@@ -1,0 +1,1 @@
+/home/ubuntu/catkin_ws/devel/.private/rexrov2_description/lib/pkgconfig/rexrov2_description.pc

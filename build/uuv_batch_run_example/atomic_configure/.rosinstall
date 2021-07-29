@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ubuntu/catkin_ws/devel/.private/uuv_batch_run_example/setup.sh

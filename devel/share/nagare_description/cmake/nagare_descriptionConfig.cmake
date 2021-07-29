@@ -1,0 +1,1 @@
+/home/ubuntu/catkin_ws/devel/.private/nagare_description/share/nagare_description/cmake/nagare_descriptionConfig.cmake
