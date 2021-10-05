@@ -22,11 +22,11 @@
       </visual>
 
       <inertial>
-        <mass value="0.1" />
+        <mass value="0.01" />
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <inertia ixx="0.000000017" ixy="0.0" ixz="0.0"
-               iyy="0.000000017" iyz="0.0"
-               izz="0.000000017" />
+        <inertia ixx="0.000002852" ixy="0.0" ixz="0.0"
+          iyy="0.000002852" iyz="0.0"
+          izz="0.000004154" />
       </inertial>
     </link>
 

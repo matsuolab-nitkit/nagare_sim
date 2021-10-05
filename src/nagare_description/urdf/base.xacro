@@ -13,10 +13,10 @@
     Vehicle's parameters (remember to enter the model parameters below)
   -->
 
-  <xacro:property name="mass" value="14.58"/>
-  <!-- <xacro:property name="mass" value="100.00"/> -->
+  <!-- <xacro:property name="mass" value="14.58"/> -->
+  <xacro:property name="mass" value="19.00"/>
   <!-- Center of gravity -->
-  <xacro:property name="cog" value="0 0 -0.1"/>
+  <xacro:property name="cog" value="0 0 0.01"/>
   <!-- Fluid density -->
   <xacro:property name="rho" value="1028"/>
 
@@ -45,9 +45,9 @@
         <inertial>
           <mass value="${mass}" />
           <origin xyz="${cog}" rpy="0 0 0"/>
-          <inertia ixx="0.52" ixy="0.00" ixz="0.00"
-                   iyy="0.41" iyz="0.00"
-                   izz="0.51" />
+          <inertia ixx="0.47" ixy="0.00" ixz="0.02"
+                   iyy="0.55" iyz="0.00"
+                   izz="0.55" />
         </inertial>
 
         <visual>

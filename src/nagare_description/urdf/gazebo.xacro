@@ -4,10 +4,10 @@
     <!-- Center of buoyancy -->
     <xacro:property name="nagare_cob" value="0 0 0"/>
 
-    <xacro:property name="nagare_volume" value="0.0924"/>
+    <xacro:property name="nagare_volume" value="0.0191"/>
 
-    <xacro:property name="nagare_length" value="0.5"/>
-    <xacro:property name="nagare_width"  value="0.5"/>
+    <xacro:property name="nagare_length" value="0.4"/>
+    <xacro:property name="nagare_width"  value="0.44"/>
     <xacro:property name="nagare_height" value="0.5"/>
 
     <xacro:macro name="nagare_hydro_model" params="namespace">
