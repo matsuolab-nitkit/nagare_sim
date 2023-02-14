@@ -13,10 +13,9 @@
     Vehicle's parameters (remember to enter the model parameters below)
   -->
 
-  <!-- <xacro:property name="mass" value="14.58"/> -->
-  <xacro:property name="mass" value="18.3875"/>
+  <xacro:property name="mass" value="18.1875"/>
   <!-- Center of gravity -->
-  <xacro:property name="cog" value="0.0 0.0 0.2"/>
+  <xacro:property name="cog" value="0 0 0"/>
   <!-- Fluid density -->
   <xacro:property name="rho" value="1028"/>
 
@@ -42,12 +41,19 @@
           Be careful to setup the coefficients for the inertial tensor,
           otherwise your model will become unstable on Gazebo
         -->
+        <!-- <inertial>
+          <mass value="${mass}" />
+          <origin xyz="${cog}" rpy="0 0 0"/>
+          <inertia ixx="0.52" ixy="0.00" ixz="0.00"
+                   iyy="0.42" iyz="0.00"
+                   izz="0.51" />
+        </inertial> -->
         <inertial>
           <mass value="${mass}" />
           <origin xyz="${cog}" rpy="0 0 0"/>
-          <inertia ixx="0.47" ixy="0.00" ixz="0.00"
-                   iyy="0.48" iyz="0.00"
-                   izz="0.45" />
+          <inertia ixx="3.01" ixy="0.00" ixz="0.00"
+                   iyy="2.59" iyz="0.00"
+                   izz="3.25" />
         </inertial>
 
         <visual>
@@ -70,6 +76,7 @@
           </geometry>
         </collision>
       </link>
+
 
     <gazebo reference="${namespace}/base_link">
       <selfCollide>false</selfCollide>

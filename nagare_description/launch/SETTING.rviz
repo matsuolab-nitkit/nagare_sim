@@ -8,9 +8,17 @@ Panels:
         - /Status1
         - /RobotModel1
         - /RobotModel1/Links1
-        - /TF1
-      Splitter Ratio: 0.592391312122345
-    Tree Height: 242
+        - /RobotModel1/Links1/nagare/base_link1
+        - /RobotModel1/Links1/nagare/thruster_01
+        - /RobotModel1/Links1/nagare/thruster_11
+        - /RobotModel1/Links1/nagare/thruster_21
+        - /RobotModel1/Links1/nagare/thruster_31
+        - /RobotModel1/Links1/nagare/thruster_41
+        - /RobotModel1/Links1/nagare/thruster_51
+        - /Path1
+        - /Axes2
+      Splitter Ratio: 0.5
+    Tree Height: 292
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -29,7 +37,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: FluidPressure
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -74,12 +82,12 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: false
+          Value: true
         nagare/camera_link_optical:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: false
+          Value: true
         nagare/dvl_link:
           Alpha: 1
           Show Axes: false
@@ -134,32 +142,32 @@ Visualization Manager:
           Value: false
         nagare/thruster_0:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
         nagare/thruster_1:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
         nagare/thruster_2:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
         nagare/thruster_3:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
         nagare/thruster_4:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
         nagare/thruster_5:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
       Name: RobotModel
@@ -168,112 +176,12 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
-    - Class: rviz/TF
+    - Class: rviz/Axes
       Enabled: true
-      Frame Timeout: 15
-      Frames:
-        All Enabled: true
-        nagare/base_footprint:
-          Value: true
-        nagare/base_link:
-          Value: true
-        nagare/base_link_ned:
-          Value: true
-        nagare/base_stabilized:
-          Value: true
-        nagare/camera_link:
-          Value: true
-        nagare/camera_link_optical:
-          Value: true
-        nagare/dvl_link:
-          Value: true
-        nagare/dvl_sonar0_link:
-          Value: true
-        nagare/dvl_sonar1_link:
-          Value: true
-        nagare/dvl_sonar2_link:
-          Value: true
-        nagare/dvl_sonar3_link:
-          Value: true
-        nagare/gps_link:
-          Value: true
-        nagare/imu_link:
-          Value: true
-        nagare/pose_sensor_link_default:
-          Value: true
-        nagare/pressure_link:
-          Value: true
-        nagare/rpt_link:
-          Value: true
-        nagare/sonar_link:
-          Value: true
-        nagare/thruster_0:
-          Value: true
-        nagare/thruster_1:
-          Value: true
-        nagare/thruster_2:
-          Value: true
-        nagare/thruster_3:
-          Value: true
-        nagare/thruster_4:
-          Value: true
-        nagare/thruster_5:
-          Value: true
-        world:
-          Value: true
-        world_ned:
-          Value: true
-      Marker Scale: 0.5
-      Name: TF
-      Show Arrows: true
-      Show Axes: true
-      Show Names: true
-      Tree:
-        world:
-          nagare/base_footprint:
-            nagare/base_stabilized:
-              nagare/base_link:
-                nagare/base_link_ned:
-                  {}
-                nagare/camera_link:
-                  nagare/camera_link_optical:
-                    {}
-                nagare/dvl_link:
-                  nagare/dvl_sonar0_link:
-                    {}
-                  nagare/dvl_sonar1_link:
-                    {}
-                  nagare/dvl_sonar2_link:
-                    {}
-                  nagare/dvl_sonar3_link:
-                    {}
-                nagare/gps_link:
-                  {}
-                nagare/imu_link:
-                  {}
-                nagare/pose_sensor_link_default:
-                  {}
-                nagare/pressure_link:
-                  {}
-                nagare/rpt_link:
-                  {}
-                nagare/sonar_link:
-                  {}
-                nagare/thruster_0:
-                  {}
-                nagare/thruster_1:
-                  {}
-                nagare/thruster_2:
-                  {}
-                nagare/thruster_3:
-                  {}
-                nagare/thruster_4:
-                  {}
-                nagare/thruster_5:
-                  {}
-          world_ned:
-            {}
-      Update Interval: 0
+      Length: 0.5
+      Name: Axes
+      Radius: 0.05000000074505806
+      Reference Frame: nagare/base_link
       Value: true
     - Alpha: 1
       Buffer Length: 1
@@ -295,8 +203,45 @@ Visualization Manager:
       Radius: 0.029999999329447746
       Shaft Diameter: 0.10000000149011612
       Shaft Length: 0.10000000149011612
-      Topic: /nagare/waypoint_path_marker
+      Topic: /nagare/trajectory_marker
       Unreliable: false
+      Value: true
+    - Class: rviz/Axes
+      Enabled: true
+      Length: 0.5
+      Name: Axes
+      Radius: 0.05000000074505806
+      Reference Frame: world
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: false
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: fluid_pressure
+      Class: rviz/FluidPressure
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 105000
+      Min Color: 0; 0; 0
+      Min Intensity: 98000
+      Name: FluidPressure
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /nagare/pressure
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
       Value: true
   Enabled: true
   Global Options:
@@ -326,33 +271,33 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.826383590698242
+      Distance: 12.101652145385742
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.21500279009342194
-        Y: -0.05473928153514862
-        Z: -0.058859746903181076
+        X: 0.08725166320800781
+        Y: 0.22191762924194336
+        Z: -0.8330817222595215
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: -0.009795952588319778
+      Pitch: 0.2698898911476135
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 6.178585529327393
+      Yaw: 0.7210103273391724
     Saved: ~
 Window Geometry:
   Displays:
-    collapsed: false
-  Height: 540
-  Hide Left Dock: false
-  Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000022a0000017dfc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001a800000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003e0000017d000000cb00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f0000017dfc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003e0000017d000000a500fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000005000000003efc0100000002fb0000000800540069006d00650100000000000005000000026c00fffffffb0000000800540069006d00650100000000000004500000000000000000000001bb0000017d00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+    collapsed: true
+  Height: 590
+  Hide Left Dock: true
+  Hide Right Dock: true
+  QMainWindow State: 000000ff00000000fd00000004000000000000024d000001affc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001da00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073000000003e000001af000000cb00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000001affc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003e000001af000000a500fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000051300000039fc0100000002fb0000000800540069006d00650000000000000005130000026c00fffffffb0000000800540069006d0065010000000000000450000000000000000000000513000001f300000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -360,7 +305,7 @@ Window Geometry:
   Tool Properties:
     collapsed: false
   Views:
-    collapsed: false
-  Width: 1280
+    collapsed: true
+  Width: 1299
   X: -2
   Y: -44

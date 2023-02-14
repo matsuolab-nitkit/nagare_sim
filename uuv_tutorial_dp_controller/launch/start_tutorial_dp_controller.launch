@@ -1,17 +1,28 @@
 <launch>
-  <arg name="uuv_name" default="bluerov"/>
+  <!-- <arg name="uuv_name" default="bluerov"/> -->
+  <arg name="uuv_name" default="nagare"/>
   <arg name="model_name" default="$(arg uuv_name)"/>
-  <arg name="saturation" default="1000"/>
+  <arg name="saturation" default="10000"/>
     <arg name="gui_on" default="true" doc="Start Gazebo client and RViz"/>
     <arg name="use_ned_frame" default="false" doc="If true, the reference frame is set to be NED (North-East-Down) instead of Gazebo's default ENU (East-North-Up)"/>
-    <arg name="Kp" default="0.5,0.50,0.50,0,0,0.50"/>
-    <!-- <arg name="Kp" default="10.0,0.5,0.5,0.5,0.5,0"/> -->
-    <arg name="Kd" default="0.1,0.1,0.1,0.1,0.1,0.50"/>
+    <!-- <arg name="Kp" default="5,5,5,0,0,0.50"/>
+    <arg name="Kd" default="20,20,20,5,5,10"/>
+    <arg name="Ki" default="0,0,0,0,0,0"/> -->
+    <arg name="Kp" default="5,5,50,0,0,0.5"/>
+    <arg name="Kd" default="50,50,50,5,5,10"/>
     <arg name="Ki" default="0,0,0,0,0,0"/>
 
-    <arg name="output_dir" default="$(find bluerov_control)/config"/>
+    <arg name="x" default="0" doc="X coordinate of the vehicle's initial position (in ENU)"/>
+    <arg name="y" default="0" doc="Y coordinate of the vehicle's initial position (in ENU)"/>
+    <arg name="z" default="-0.1" doc="Z coordinate of the vehicle's initial position (in ENU)"/>
+    <arg name="yaw" default="0" doc="Yaw angle of the vehicle's initial orientation"/>
+
+    <!-- <arg name="output_dir" default="$(find bluerov_control)/config"/>
     <arg name="config_file" default="$(find bluerov_control)/config/thruster_manager.yaml"/>
-    <arg name="tam_file" default="$(find bluerov_control)/config/TAM.yaml"/>
+    <arg name="tam_file" default="$(find bluerov_control)/config/TAM.yaml"/> -->
+    <arg name="output_dir" default="$(find nagare_control)/config"/>
+    <arg name="config_file" default="$(find nagare_control)/config/thruster_manager.yaml"/>
+    <arg name="tam_file" default="$(find nagare_control)/config/TAM.yaml"/>
 
     <arg name="teleop_on" default="false" doc="Start joystick teleop node"/>
     <arg name="joy_id" default="0" doc="ID of the joystick device"/>
@@ -20,18 +31,35 @@
     <arg name="axis_y" default="3" doc="Joystick mapping for Y component of velocity reference input"/>
     <arg name="axis_z" default="1" doc="Joystick mapping for Z component of velocity reference input"/>
 
-  <include file="$(find uuv_thruster_manager)/launch/thruster_manager.launch">
+    <include file="$(find uuv_gazebo_worlds)/launch/ocean_waves.launch"/>
+    <include file="$(find uuv_simulation_wrapper)/launch/unpause_simulation.launch">
+        <arg name="timeout" value="5"/>
+    </include>
+    <!-- <include file="$(find bluerov_description)/launch/upload.launch">
+        <arg name="x" value="$(arg x)"/>
+        <arg name="y" value="$(arg y)"/>
+        <arg name="z" value="$(arg z)"/>
+        <arg name="yaw" value="$(arg yaw)"/>
+    </include> -->
+    <include file="$(find nagare_description)/launch/upload.launch">
+        <arg name="x" value="$(arg x)"/>
+        <arg name="y" value="$(arg y)"/>
+        <arg name="z" value="$(arg z)"/>
+        <arg name="yaw" value="$(arg yaw)"/>
+    </include>
+
+  <!-- <include file="$(find uuv_thruster_manager)/launch/thruster_manager.launch">
       <arg name="uuv_name" value="$(arg uuv_name)"/>
       <arg name="model_name" value="$(arg model_name)"/>
       <arg name="output_dir" value="$(arg output_dir)"/>
       <arg name="config_file" value="$(arg config_file)"/>
       <arg name="tam_file" value="$(arg tam_file)"/>
-  </include>
+  </include> -->
 
-    <!-- <include file="$(find uuv_trajectory_control)/launch/rov_pid_controller.launch">
+    <include file="$(find uuv_trajectory_control)/launch/rov_pid_controller.launch">
       <arg name="uuv_name" value="$(arg uuv_name)"/>
       <arg name="gui_on" value="$(arg gui_on)"/>
-      <arg name="saturation" value="1000"/>
+      <arg name="saturation" value="3000"/>
       <arg name="Kp" value="$(arg Kp)"/>
       <arg name="Kd" value="$(arg Kd)"/>
       <arg name="Ki" value="$(arg Ki)"/>
@@ -39,7 +67,7 @@
       <arg name="thruster_manager_output_dir" value="$(arg output_dir)"/>
       <arg name="thruster_manager_config_file" value="$(arg config_file)"/>
       <arg name="tam_file" value="$(arg tam_file)"/>
-    </include> -->
+    </include>
 
     <group if="$(arg teleop_on)">
       <!-- Start joystick teleop node  -->
@@ -52,10 +80,10 @@
           <arg name="axis_x" value="$(arg axis_x)"/>
           <arg name="axis_y" value="$(arg axis_y)"/>
           <arg name="axis_z" value="$(arg axis_z)"/>
-          <arg name="gain_yaw" default="0.2"/>
-          <arg name="gain_x" default="0.5"/>
-          <arg name="gain_y" default="0.5"/>
-          <arg name="gain_z" default="0.5"/>
+          <arg name="gain_yaw" default="2"/>
+          <arg name="gain_x" default="5"/>
+          <arg name="gain_y" default="5"/>
+          <arg name="gain_z" default="5"/>
       </include>
     </group>
 
