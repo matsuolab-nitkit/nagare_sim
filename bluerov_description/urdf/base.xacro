@@ -13,7 +13,8 @@
     Vehicle's parameters (remember to enter the model parameters below)
   -->
 
-  <xacro:property name="mass" value="8.34"/>
+  <!-- <xacro:property name="mass" value="8.34"/> -->
+    <xacro:property name="mass" value="8.38"/>
   <!-- Center of gravity -->
   <xacro:property name="cog" value="0 0 0"/>
   <!-- Fluid density -->
